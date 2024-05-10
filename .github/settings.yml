@@ -5,6 +5,7 @@ labels:
   - name: 🐞 bug
     color: ee0701
     description: this isn't working as expected
+    oldname: bug
   - name: ✨ feature request
     color: fbca04
     description: a new feature request
