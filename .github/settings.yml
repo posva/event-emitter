@@ -1,6 +1,6 @@
 repository:
-  homepage: https://uvr.esm.is
-  description: Next Generation file based typed routing for Vue Router
+  homepage:
+  description: Type safe extendable event emitter / pubsub class
 labels:
   - name: 🐞 bug
     color: ee0701
@@ -16,7 +16,7 @@ labels:
   - name: ♦️ need repro
     color: c9581c
     description: the issue needs a reproduction for further investigation
-  - name: has workaround
+  - name: 🧑‍💻 has workaround
     color: 2139c4
     description: has a temporary fix to get around the problem
   - name: 👍 contribution welcome
@@ -40,7 +40,7 @@ labels:
   - name: 🙏 help wanted
     color: 008672
     description: help in this issue is welcome
-    oldname: help wanted
-  - name: wontfix
+  - name: 🚫 wontfix
     color: ffffff
     description: this issue won't be fixed
+    oldname: wontfix
