@@ -1,6 +1,7 @@
 repository:
   homepage:
   description: Type safe extendable event emitter / pubsub class
+  has_wiki: false
 labels:
   - name: 🐞 bug
     color: ee0701

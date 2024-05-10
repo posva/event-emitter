@@ -1,1 +1,1 @@
-export { EventEmitter, type EventType } from './event-emitter'
+export { EventEmitter } from './event-emitter'
