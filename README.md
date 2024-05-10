@@ -1,4 +1,4 @@
-# EventEmitter [![build status](https://github.com/posva/event-emitter/workflows/test/badge.svg?branch=main)](https://github.com/posva/event-emitter/actions/workflows/test.yml?query=branch%3Amain) [![npm package](https://badgen.net/npm/v/event-emitter)](https://www.npmjs.com/package/event-emitter) [![coverage](https://badgen.net/codecov/c/github/posva/event-emitter/master)](https://codecov.io/github/posva/event-emitter) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
+# EventEmitter [![build status](https://github.com/posva/event-emitter/workflows/ci/badge.svg?branch=main)](https://github.com/posva/event-emitter/actions/workflows/ci.yml?query=branch%3Amain) [![npm package](https://badgen.net/npm/v/@posva/event-emitter)](https://www.npmjs.com/package/@posva/event-emitter) [![coverage](https://badgen.net/codecov/c/github/posva/event-emitter/main)](https://codecov.io/github/posva/event-emitter) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
 
 > Typed event and lightweight event emitter with a class based API
 
