@@ -10,16 +10,19 @@ export type GenericEventMap = Record<EventType, unknown>
 
 /**
  * Event handler function. Transforms tuples into rest parameters.
+ * @internal
  */
 export type Handler<Payload> = (...payload: ToTuple<Payload>) => void
 
 /**
  * Convenience type for a list of event handlers.
+ * @internal
  */
 export type EventHandlerList<Payload = unknown> = Handler<Payload>[]
 
 /**
  * Convenience type for a list of wildcard event handlers.
+ * @internal
  */
 export type WildCardEventHandlerList<EventMap extends GenericEventMap> =
   WildcardHandler<EventMap>[]
@@ -29,21 +32,25 @@ export type WildCardEventHandlerList<EventMap extends GenericEventMap> =
  */
 export type EventHandlerMap<EventMap extends GenericEventMap> = Map<
   keyof EventMap | '*',
-  | EventHandlerList<EventMap[keyof EventMap]>
-  | WildCardEventHandlerList<EventMap>
+  GenericEventHandler<EventMap>[]
 >
 
+/**
+ * Event handler function for a specific event type.
+ */
 export type GenericEventHandler<EventMap extends GenericEventMap> =
   | Handler<EventMap[keyof EventMap]>
   | WildcardHandler<EventMap>
 
 /**
  * Convenience type for the returned function of `on`.
+ * @internal
  */
 export type RemoveEventListener = () => void
 
 /**
  * Event handler function for the `'*'` event type.
+ * @internal
  */
 export type WildcardHandler<EventMap extends GenericEventMap> = (
   ...args: {
@@ -53,12 +60,9 @@ export type WildcardHandler<EventMap extends GenericEventMap> = (
 
 /**
  * Transforms a non tuple into a tuple with the value but keeps tuples as is.
+ * @internal
  */
 export type ToTuple<T> = T extends [unknown, ...unknown[]] | [] ? T : [T]
-
-type A = ToTuple<[1, 2, 3]> // [1, 2, 3]
-type B = ToTuple<number[]> // [number[]]
-type C = ToTuple<number> // [number]
 
 /**
  * Event emitter class.
