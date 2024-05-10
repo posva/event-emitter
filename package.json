@@ -1,0 +1,84 @@
+{
+  "name": "@posva/event-emitter",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Type safe and light event emitter / pubsub class",
+  "packageManager": "pnpm@9.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Eduardo San Martin Morote",
+    "email": "posva13@gmail.com"
+  },
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/posva",
+  "homepage": "https://github.com/posva/event-emitter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posva/event-emitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/posva/event-emitter/issues"
+  },
+  "keywords": [
+    "event",
+    "emitter",
+    "eventemitter",
+    "mitt",
+    "pub",
+    "sub",
+    "pubsub",
+    "class",
+    "light"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": {
+        "import": "./dist/index.d.ts",
+        "require": "./dist/index.d.cts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "unpkg": "dist/index.global.js",
+  "jsdelivr": "dist/index.global.js",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest --ui --coverage --typecheck",
+    "size": "size-limit"
+  },
+  "size-limit": [
+    {
+      "path": "dist/index.js",
+      "import": "{ EventEmitter }"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.3",
+    "@vitest/coverage-v8": "2.0.0-beta.2",
+    "@vitest/ui": "2.0.0-beta.2",
+    "size-limit": "^11.1.3",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "2.0.0-beta.2"
+  }
+}
