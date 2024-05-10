@@ -14,9 +14,43 @@ npm i @posva/event-emitter
 
 ## Usage
 
+```ts
+import { EventEmitter } from '@posva/event-emitter'
+
+const emitter = new EventEmitter<{
+  // Define the events you want to emit and their arguments
+  start: []
+  // non tuples are also supported
+  end: { reason: string }
+
+  // You can also define multiple arguments
+  sum: [number, number]
+}>()
+
+// no arguments
+emitter.emit('start')
+// object payload
+emitter.emit('end', { reason: 'finished' })
+// multiple arguments
+emitter.emit('sum', 1, 2)
+
+emitter.on('end', ({ reason }) => console.log('ended:', reason))
+
+// You can also listen to all events
+
+emitter.on('*', (event, payload) => {
+  if (event === 'end') {
+    // payload is always an array
+    const [{ reason }] = payload
+  } else if (event === 'sum') {
+    const [a, b] = payload
+  }
+})
+```
+
 ## API
 
-Most of the code can be discovered through the autocompletion but the API documentation is available at https://posva.net/mande/.
+Most of the code can be discovered through the autocompletion but the API documentation is available at https://event-emitter.esm.is.
 
 ## Related
 
