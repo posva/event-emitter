@@ -12,6 +12,7 @@ labels:
   - name: ⚡️ enhancement
     color: a2eeef
     description: improvement over an existing feature
+    oldname: enhancement
   - name: ♦️ need repro
     color: c9581c
     description: the issue needs a reproduction for further investigation
@@ -27,18 +28,19 @@ labels:
   - name: 💬 discussion
     color: 4935ad
     description: topic that requires further discussion
+    oldname: discussion
   - name: 📚 docs
     color: 8be281
     description: related to documentation
+    oldname: documentation
   - name: 1️⃣ good first issue
     color: 7057ff
     description: this should be manageable for new-comers
+    oldname: good first issue
   - name: 🙏 help wanted
     color: 008672
     description: help in this issue is welcome
+    oldname: help wanted
   - name: wontfix
     color: ffffff
     description: this issue won't be fixed
-  - name: 🔄 data-loaders
-    color: baffc9
-    description: related to Data Loaders
