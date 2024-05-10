@@ -9,15 +9,6 @@ const commonOptions = {
   format: ['cjs', 'esm'],
   dts: true,
   target: 'esnext',
-  banner: {
-    js: `
-/*!
- * ${pkg.name} v${pkg.version}
- * (c) 2024-present Eduardo San Martin Morote
- * @license ${pkg.license}
- */
-`.trim(),
-  },
 } satisfies Options
 
 export default defineConfig([

@@ -3,8 +3,9 @@
 > Typed event and lightweight event emitter with a class based API
 
 - ⛓️ **Typed**: Powerful autocompletion and type checking
-- 📦 **Class based**: Extend the `EventEmitter` class
-- 💨 **Lightweight**: <200 bytes min+brotli
+- 📦 **Class based**: Add event emitting to your classes
+- 💨 **Lightweight**: 188 bytes min+brotli
+- 🌐 **Runtime Agnostic**: Works everywhere: Browser, node, Bun...
 
 ## Installation
 
@@ -48,9 +49,28 @@ emitter.on('*', (event, payload) => {
 })
 ```
 
+Since `EventEmitter` is a class, you can extend it in your own classes:
+
+```ts
+class CardGame extends EventEmitter<{
+  start: []
+  end: { winner: string }
+  draw: [player: string, card: string]
+  play: [player: string, card: string]
+}> {
+  start() {
+    this.emit('start')
+  }
+
+  end(winner: string) {
+    this.emit('end', { winner })
+  }
+}
+```
+
 ## API
 
-Most of the code can be discovered through the autocompletion but the API documentation is available at https://event-emitter.esm.is.
+Most of the code can be discovered through the autocompletion but the API documentation is available at [https://event-emitter.esm.is](https://event-emitter.esm.is).
 
 ## Related
 
