@@ -1,6 +1,10 @@
-# EventEmitter [![build status](https://github.com/posva/event-emitter/workflows/ci/badge.svg?branch=main)](https://github.com/posva/event-emitter/actions/workflows/ci.yml?query=branch%3Amain) [![npm package](https://badgen.net/npm/v/@posva/event-emitter)](https://www.npmjs.com/package/@posva/event-emitter) [![coverage](https://badgen.net/codecov/c/github/posva/event-emitter/main)](https://codecov.io/github/posva/event-emitter) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/posva/thanks)
+# EventEmitter [![ci](https://github.com/posva/event-emitter/actions/workflows/ci.yml/badge.svg)](https://github.com/posva/event-emitter/actions/workflows/ci.yml) [![npm package](https://badgen.net/npm/v/@posva/event-emitter)](https://www.npmjs.com/package/@posva/event-emitter) [![codecov](https://codecov.io/github/posva/event-emitter/graph/badge.svg?token=37fOzdCXYi)](https://codecov.io/github/posva/event-emitter) [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://esm.dev/open-source)
 
 > Typed event and lightweight event emitter with a class based API
+
+- ⛓️ **Typed**: Powerful autocompletion and type checking
+- 📦 **Class based**: Extend the `EventEmitter` class
+- 💨 **Lightweight**: <200 bytes min+brotli
 
 ## Installation
 
