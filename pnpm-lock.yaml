@@ -28,13 +28,13 @@ importers:
         version: 9.5.0
       tsup:
         specifier: ^8.3.5
-        version: 8.3.5(jiti@2.3.3)(postcss@8.4.47)(typescript@5.7.2)(yaml@2.6.1)
+        version: 8.3.5(jiti@2.3.3)(postcss@8.4.47)(typescript@5.7.3)(yaml@2.6.1)
       typedoc:
         specifier: ^0.27.6
-        version: 0.27.6(typescript@5.7.2)
+        version: 0.27.6(typescript@5.7.3)
       typescript:
-        specifier: ^5.7.2
-        version: 5.7.2
+        specifier: ^5.7.3
+        version: 5.7.3
       vitest:
         specifier: 2.1.8
         version: 2.1.8(@types/node@22.10.5)(@vitest/ui@2.1.8)
@@ -1631,8 +1631,8 @@ packages:
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x
 
-  typescript@5.7.2:
-    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3202,7 +3202,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsup@8.3.5(jiti@2.3.3)(postcss@8.4.47)(typescript@5.7.2)(yaml@2.6.1):
+  tsup@8.3.5(jiti@2.3.3)(postcss@8.4.47)(typescript@5.7.3)(yaml@2.6.1):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.24.0)
       cac: 6.7.14
@@ -3222,7 +3222,7 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.4.47
-      typescript: 5.7.2
+      typescript: 5.7.3
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -3237,16 +3237,16 @@ snapshots:
 
   typedarray@0.0.6: {}
 
-  typedoc@0.27.6(typescript@5.7.2):
+  typedoc@0.27.6(typescript@5.7.3):
     dependencies:
       '@gerrit0/mini-shiki': 1.24.1
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
-      typescript: 5.7.2
+      typescript: 5.7.3
       yaml: 2.6.1
 
-  typescript@5.7.2: {}
+  typescript@5.7.3: {}
 
   uc.micro@2.1.0: {}
 
