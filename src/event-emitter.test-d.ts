@@ -138,4 +138,25 @@ describe('EventEmitter', () => {
       })
     })
   })
+
+  describe('off()', () => {
+    it('handles removal of event handler', () => {
+      const emitter = new EventEmitter<{ c: [] } & OtherEvents>()
+      emitter.off('c', () => {})
+      // @ts-expect-error: no args
+      emitter.off('c', (payload) => {})
+    })
+
+    it('handles removal of wildcard event handler', () => {
+      const emitter = new EventEmitter<
+        { a: { isA: boolean } } & OtherEvents
+      >()
+
+      emitter.off('*', (type, payload) => {
+        if (type === 'a') {
+          expectTypeOf(payload).toEqualTypeOf<[{ isA: boolean }]>()
+        }
+      })
+    })
+  })
 })

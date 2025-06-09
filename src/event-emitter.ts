@@ -112,6 +112,7 @@ export class EventEmitter<Events extends GenericEventMap> {
    * @param handler Handler function to remove
    */
   off<Key extends keyof Events>(type: Key, handler?: Handler<Events[Key]>): void
+  off(type: '*', handler?: WildcardHandler<Events>): void
   /**
    * Remove all event handlers.
    */
