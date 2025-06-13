@@ -158,6 +158,14 @@ describe('EventEmitter', () => {
       inst.off()
       expect(events.size).toBe(0)
     })
+
+    it('removes a specifc cactchall * handler', () => {
+      const star = vi.fn()
+      inst.on('*', star)
+      expect(events.get('*')).not.toHaveLength(0)
+      inst.off('*', star)
+      expect(events.get('*')).toHaveLength(0)
+    })
   })
 
   describe('emit()', () => {
