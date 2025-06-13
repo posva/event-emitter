@@ -25,9 +25,7 @@ describe('EventEmitter', () => {
     })
 
     it('handles an event with multiple arguments as the payload', () => {
-      const emitter = new EventEmitter<
-        { rest: [a: string, b: number] } & OtherEvents
-      >()
+      const emitter = new EventEmitter<{ rest: [a: string, b: number] } & OtherEvents>()
       emitter.on('rest', (a, b) => {
         expectTypeOf(a).toEqualTypeOf<string>()
         expectTypeOf(b).toEqualTypeOf<number>()
@@ -51,9 +49,7 @@ describe('EventEmitter', () => {
 
     describe('wildcard event handler payload', () => {
       it('object', () => {
-        const emitter = new EventEmitter<
-          { a: { isA: boolean } } & OtherEvents
-        >()
+        const emitter = new EventEmitter<{ a: { isA: boolean } } & OtherEvents>()
 
         emitter.on('*', (type, payload) => {
           if (type === 'a') {
@@ -63,9 +59,7 @@ describe('EventEmitter', () => {
       })
 
       it('multiple arguments', () => {
-        const emitter = new EventEmitter<
-          { rest: [a: string, b: number] } & OtherEvents
-        >()
+        const emitter = new EventEmitter<{ rest: [a: string, b: number] } & OtherEvents>()
 
         emitter.on('*', (type, payload) => {
           if (type === 'rest') {
@@ -119,16 +113,12 @@ describe('EventEmitter', () => {
       })
 
       it('should emit an event with an object payload', () => {
-        const emitter = new EventEmitter<
-          { a: { isA: boolean } } & OtherEvents
-        >()
+        const emitter = new EventEmitter<{ a: { isA: boolean } } & OtherEvents>()
         emitter.emit('a', { isA: true })
       })
 
       it('should emit an event with multiple arguments as the payload', () => {
-        const emitter = new EventEmitter<
-          { rest: [a: string, b: number] } & OtherEvents
-        >()
+        const emitter = new EventEmitter<{ rest: [a: string, b: number] } & OtherEvents>()
         emitter.emit('rest', 'a', 2)
       })
 
@@ -148,10 +138,12 @@ describe('EventEmitter', () => {
     })
 
     it('handles removal of wildcard event handler', () => {
-      const emitter = new EventEmitter<
-        { a: { isA: boolean } } & OtherEvents
-      >()
+      const emitter = new EventEmitter<{ a: { isA: boolean } } & OtherEvents>()
 
+      // remove all wildcard handlers
+      emitter.off('*')
+
+      // remove specific wildcard handler
       emitter.off('*', (type, payload) => {
         if (type === 'a') {
           expectTypeOf(payload).toEqualTypeOf<[{ isA: boolean }]>()
