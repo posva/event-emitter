@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.3](https://github.com/posva/event-emitter/compare/v1.0.2...v1.0.3) (2025-06-13)
+
+
+### Bug Fixes
+
+* **types:** added overload for off method to handle wildcard handlers ([#40](https://github.com/posva/event-emitter/issues/40)) ([9edac6b](https://github.com/posva/event-emitter/commit/9edac6b86cadc20f39eea5db5efecb6cbfad8e29))
+
 ### [1.0.2](https://github.com/posva/event-emitter/compare/v1.0.1...v1.0.2) (2024-05-10)
 
 
