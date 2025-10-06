@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "type": "module",
   "description": "Type safe and light event emitter / pubsub class",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "publishConfig": {
     "access": "public"
   },
@@ -75,14 +75,14 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.2.0",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.6.2",
     "@vitest/coverage-v8": "3.2.4",
     "@vitest/ui": "3.2.4",
     "size-limit": "^11.2.0",
     "standard-version": "^9.5.0",
     "tsup": "^8.5.0",
     "typedoc": "^0.28.13",
-    "typescript": "^5.9.2",
+    "typescript": "^5.9.3",
     "vitest": "3.2.4"
   }
 }
