@@ -12,8 +12,8 @@ importers:
         specifier: ^12.0.0
         version: 12.0.0(size-limit@12.0.0(jiti@2.4.2))
       '@types/node':
-        specifier: ^24.10.13
-        version: 24.10.13
+        specifier: ^24.11.0
+        version: 24.11.0
       '@vitest/coverage-v8':
         specifier: 4.0.18
         version: 4.0.18(vitest@4.0.18)
@@ -37,7 +37,7 @@ importers:
         version: 5.9.3
       vitest:
         specifier: 4.0.18
-        version: 4.0.18(@types/node@24.10.13)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
+        version: 4.0.18(@types/node@24.11.0)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
 
 packages:
 
@@ -576,8 +576,8 @@ packages:
   '@types/minimist@1.2.5':
     resolution: {integrity: sha512-hov8bUuiLiyFPGyFPE1lwWhmzYbirOXQNNo40+y3zow8aFVTeyn3VWL0VFFfdNddA8S4Vf0Tc062rzyNr7Paag==}
 
-  '@types/node@24.10.13':
-    resolution: {integrity: sha512-oH72nZRfDv9lADUBSo104Aq7gPHpQZc4BTx38r9xf9pg5LfP6EzSyH2n7qFmmxRQXh7YlUXODcYsg6PuTDSxGg==}
+  '@types/node@24.11.0':
+    resolution: {integrity: sha512-fPxQqz4VTgPI/IQ+lj9r0h+fDR66bzoeMGHp8ASee+32OSGIkeASsoZuJixsQoVef1QJbeubcPBxKk22QVoWdw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -982,6 +982,7 @@ packages:
   git-raw-commits@2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   git-remote-origin-url@2.0.0:
@@ -991,6 +992,7 @@ packages:
   git-semver-tags@4.1.1:
     resolution: {integrity: sha512-OWyMt5zBe7xFs8vglMmhM9lRQzCWL3WjHtxNNfJTMngGym7pC1kh8sP6jevfydJ6LP3ZvGxfb6ABYgPUM0mtsA==}
     engines: {node: '>=10'}
+    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
     hasBin: true
 
   gitconfiglocal@1.0.0:
@@ -2170,7 +2172,7 @@ snapshots:
 
   '@types/minimist@1.2.5': {}
 
-  '@types/node@24.10.13':
+  '@types/node@24.11.0':
     dependencies:
       undici-types: 7.16.0
 
@@ -2190,7 +2192,7 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.0.18(@types/node@24.10.13)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
+      vitest: 4.0.18(@types/node@24.11.0)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
 
   '@vitest/expect@4.0.18':
     dependencies:
@@ -2201,13 +2203,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.18(vite@6.3.5(@types/node@24.10.13)(jiti@2.4.2)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.18(vite@6.3.5(@types/node@24.11.0)(jiti@2.4.2)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.0.18
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 6.3.5(@types/node@24.10.13)(jiti@2.4.2)(yaml@2.8.1)
+      vite: 6.3.5(@types/node@24.11.0)(jiti@2.4.2)(yaml@2.8.1)
 
   '@vitest/pretty-format@4.0.18':
     dependencies:
@@ -2235,7 +2237,7 @@ snapshots:
       sirv: 3.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vitest: 4.0.18(@types/node@24.10.13)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
+      vitest: 4.0.18(@types/node@24.11.0)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1)
 
   '@vitest/utils@4.0.18':
     dependencies:
@@ -3356,7 +3358,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite@6.3.5(@types/node@24.10.13)(jiti@2.4.2)(yaml@2.8.1):
+  vite@6.3.5(@types/node@24.11.0)(jiti@2.4.2)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.5
       fdir: 6.5.0(picomatch@4.0.3)
@@ -3365,15 +3367,15 @@ snapshots:
       rollup: 4.43.0
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 24.11.0
       fsevents: 2.3.3
       jiti: 2.4.2
       yaml: 2.8.1
 
-  vitest@4.0.18(@types/node@24.10.13)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1):
+  vitest@4.0.18(@types/node@24.11.0)(@vitest/ui@4.0.18)(jiti@2.4.2)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.0.18
-      '@vitest/mocker': 4.0.18(vite@6.3.5(@types/node@24.10.13)(jiti@2.4.2)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.18(vite@6.3.5(@types/node@24.11.0)(jiti@2.4.2)(yaml@2.8.1))
       '@vitest/pretty-format': 4.0.18
       '@vitest/runner': 4.0.18
       '@vitest/snapshot': 4.0.18
@@ -3390,10 +3392,10 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 6.3.5(@types/node@24.10.13)(jiti@2.4.2)(yaml@2.8.1)
+      vite: 6.3.5(@types/node@24.11.0)(jiti@2.4.2)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 24.10.13
+      '@types/node': 24.11.0
       '@vitest/ui': 4.0.18(vitest@4.0.18)
     transitivePeerDependencies:
       - jiti
