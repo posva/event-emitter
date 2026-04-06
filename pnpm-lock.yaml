@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  tsup@8.5.1:
+    hash: ce9dbc714c187cea78868f1e68c1a0e5097ddbceb7e976a564d94f2291b5bcb9
+    path: patches/tsup@8.5.1.patch
+
 importers:
 
   .:
@@ -28,7 +33,7 @@ importers:
         version: 9.5.0
       tsup:
         specifier: ^8.5.1
-        version: 8.5.1(jiti@2.4.2)(postcss@8.5.5)(typescript@6.0.2)(yaml@2.8.3)
+        version: 8.5.1(patch_hash=ce9dbc714c187cea78868f1e68c1a0e5097ddbceb7e976a564d94f2291b5bcb9)(jiti@2.4.2)(postcss@8.5.5)(typescript@6.0.2)(yaml@2.8.3)
       typedoc:
         specifier: ^0.28.18
         version: 0.28.18(typescript@6.0.2)
@@ -3593,7 +3598,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsup@8.5.1(jiti@2.4.2)(postcss@8.5.5)(typescript@6.0.2)(yaml@2.8.3):
+  tsup@8.5.1(patch_hash=ce9dbc714c187cea78868f1e68c1a0e5097ddbceb7e976a564d94f2291b5bcb9)(jiti@2.4.2)(postcss@8.5.5)(typescript@6.0.2)(yaml@2.8.3):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.27.0)
       cac: 6.7.14
