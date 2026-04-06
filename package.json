@@ -82,7 +82,7 @@
     "standard-version": "^9.5.0",
     "tsup": "^8.5.1",
     "typedoc": "^0.28.18",
-    "typescript": "^5.9.3",
+    "typescript": "^6.0.2",
     "vitest": "4.1.2"
   }
 }
