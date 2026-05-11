@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "type": "module",
   "description": "Type safe and light event emitter / pubsub class",
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@10.33.4",
   "publishConfig": {
     "access": "public"
   },
@@ -75,7 +75,7 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^12.1.0",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.12.3",
     "@vitest/coverage-v8": "4.1.5",
     "@vitest/ui": "4.1.5",
     "size-limit": "^12.1.0",
