@@ -79,7 +79,7 @@
     "@vitest/coverage-v8": "5.0.0",
     "@vitest/ui": "5.0.0",
     "size-limit": "^12.1.0",
-    "standard-version": "^9.5.0",
+    "commit-and-tag-version": "^9.5.0",
     "tsup": "^8.5.1",
     "typedoc": "^0.28.20",
     "typescript": "^5.9.3",
