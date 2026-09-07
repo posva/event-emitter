@@ -74,11 +74,11 @@
     }
   ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^12.1.0",
+    "@size-limit/preset-small-lib": "^13.0.3",
     "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "5.0.0",
     "@vitest/ui": "5.0.0",
-    "size-limit": "^12.1.0",
+    "size-limit": "^13.0.3",
     "standard-version": "^9.5.0",
     "tsup": "^8.5.1",
     "typedoc": "^0.28.20",
