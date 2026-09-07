@@ -1,3 +1,7 @@
+# [2.0.0](https://github.com/posva/event-emitter/compare/v1.0.3...v2.0.0) (2026-09-07)
+
+This version is ESM only and reduces the install size.
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

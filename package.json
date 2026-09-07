@@ -1,6 +1,6 @@
 {
   "name": "@posva/event-emitter",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "packageManager": "pnpm@12.3.4",
   "description": "Type safe and light event emitter / pubsub class",
   "keywords": [
