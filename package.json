@@ -76,13 +76,13 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^12.1.0",
     "@types/node": "^24.13.3",
-    "@vitest/coverage-v8": "4.1.11",
-    "@vitest/ui": "4.1.11",
+    "@vitest/coverage-v8": "5.0.0",
+    "@vitest/ui": "5.0.0",
     "size-limit": "^12.1.0",
     "standard-version": "^9.5.0",
     "tsup": "^8.5.1",
     "typedoc": "^0.28.20",
     "typescript": "^5.9.3",
-    "vitest": "4.1.11"
+    "vitest": "5.0.0"
   }
 }
