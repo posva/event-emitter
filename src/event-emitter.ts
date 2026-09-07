@@ -1,5 +1,5 @@
 /**
- * Valid event tyes.
+ * Valid event types.
  */
 export type EventType = string | symbol
 
@@ -24,8 +24,7 @@ export type EventHandlerList<Payload = unknown> = Handler<Payload>[]
  * Convenience type for a list of wildcard event handlers.
  * @internal
  */
-export type WildCardEventHandlerList<EventMap extends GenericEventMap> =
-  WildcardHandler<EventMap>[]
+export type WildCardEventHandlerList<EventMap extends GenericEventMap> = WildcardHandler<EventMap>[]
 
 /**
  * Map of event names to registered handler functions.
@@ -82,20 +81,14 @@ export class EventEmitter<Events extends GenericEventMap> {
    * @param type Type of event to listen for, or `'*'` for all events
    * @param handler Function to call in response to given event
    */
-  on<Key extends keyof Events>(
-    type: Key,
-    handler: Handler<Events[Key]>,
-  ): RemoveEventListener
+  on<Key extends keyof Events>(type: Key, handler: Handler<Events[Key]>): RemoveEventListener
   /**
    * Register an event handler for all events.
    * @param type `'*'`
    * @param handler Function to call in response to given event
    */
   on(type: '*', handler: WildcardHandler<Events>): RemoveEventListener
-  on(
-    type: EventType,
-    handler: GenericEventHandler<Events>,
-  ): RemoveEventListener {
+  on(type: EventType, handler: GenericEventHandler<Events>): RemoveEventListener {
     if (!this.all.has(type)) {
       this.all.set(type, [])
     }
@@ -122,8 +115,7 @@ export class EventEmitter<Events extends GenericEventMap> {
       return this.all.clear()
     }
 
-    const handlers: Array<GenericEventHandler<Events>> | undefined =
-      this.all.get(type)
+    const handlers: Array<GenericEventHandler<Events>> | undefined = this.all.get(type)
     if (handlers) {
       if (handler) {
         handlers.splice(handlers.indexOf(handler) >>> 0, 1)
@@ -142,16 +134,11 @@ export class EventEmitter<Events extends GenericEventMap> {
    * @param type The event type to invoke
    * @param payload Any value to each handler
    */
-  emit<Key extends keyof Events>(
-    type: Key,
-    ...payload: ToTuple<Events[Key]>
-  ): void {
+  emit<Key extends keyof Events>(type: Key, ...payload: ToTuple<Events[Key]>): void {
     let handlers:
       | EventHandlerList<Events[keyof Events]>
       | WildCardEventHandlerList<Events>
-      | undefined = this.all.get(type) as
-      | EventHandlerList<Events[keyof Events]>
-      | undefined
+      | undefined = this.all.get(type) as EventHandlerList<Events[keyof Events]> | undefined
 
     // copy to trigger handlers even if they are removed
     handlers?.slice().map((handler) => {

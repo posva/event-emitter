@@ -14,8 +14,8 @@ describe('EventEmitter', () => {
     map.set('foo', [a, b])
     const events = new EventEmitter<{ foo: [] }>(map)
     events.emit('foo')
-    expect(a).toHaveBeenCalledOnce()
-    expect(b).toHaveBeenCalledOnce()
+    expect(a).toHaveBeenCalledTimes(1)
+    expect(b).toHaveBeenCalledTimes(1)
   })
 
   const eventType = Symbol('eventType')
@@ -159,7 +159,7 @@ describe('EventEmitter', () => {
       expect(events.size).toBe(0)
     })
 
-    it('removes a specifc cactchall * handler', () => {
+    it('removes a specific catch-all * handler', () => {
       const star = vi.fn()
       inst.on('*', star)
       expect(events.get('*')).not.toHaveLength(0)
@@ -193,9 +193,9 @@ describe('EventEmitter', () => {
       inst.emit('Foo', 'Foo arg')
       inst.emit('FOO', 'FOO arg')
 
-      expect(onFoo).toHaveBeenCalledOnce()
+      expect(onFoo).toHaveBeenCalledTimes(1)
       expect(onFoo).toHaveBeenCalledWith('Foo arg')
-      expect(onFOO).toHaveBeenCalledOnce()
+      expect(onFOO).toHaveBeenCalledTimes(1)
       expect(onFOO).toHaveBeenCalledWith('FOO arg')
     })
 
@@ -207,12 +207,12 @@ describe('EventEmitter', () => {
       events.set('*', [star])
 
       inst.emit('foo', ea)
-      expect(star).toHaveBeenCalledOnce()
+      expect(star).toHaveBeenCalledTimes(1)
       expect(star).toHaveBeenCalledWith('foo', [ea])
       star.mockClear()
 
       inst.emit('bar', eb)
-      expect(star).toHaveBeenCalledOnce()
+      expect(star).toHaveBeenCalledTimes(1)
       expect(star).toHaveBeenCalledWith('bar', [eb])
     })
   })

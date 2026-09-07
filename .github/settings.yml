@@ -1,47 +1,53 @@
+# https://github.com/apps/settings
+# https://github.com/repository-settings/app
+# NOTE: Color values are quoted to avoid YAML misinterpreting hex as numbers
+
 repository:
   homepage: https://event-emitter.esm.is/
   description: <200 bytes type safe extendable event emitter / pubsub class
+  topics: typescript, event-emitter, pubsub
   has_wiki: false
+
 labels:
   - name: 🐞 bug
-    color: ee0701
+    color: '#ee0701'
     description: this isn't working as expected
-    oldname: bug
   - name: ✨ feature request
-    color: fbca04
+    color: '#fbca04'
     description: a new feature request
   - name: ⚡️ enhancement
-    color: a2eeef
+    color: '#a2eeef'
     description: improvement over an existing feature
-    oldname: enhancement
   - name: ♦️ need repro
-    color: c9581c
+    color: '#c9581c'
     description: the issue needs a reproduction for further investigation
-  - name: 🧑‍💻 has workaround
-    color: 2139c4
+  - name: has workaround
+    color: '#2139c4'
     description: has a temporary fix to get around the problem
   - name: 👍 contribution welcome
-    color: 0e8a16
+    color: '#0e8a16'
     description: others are welcome to implement/fix this
   - name: 🔹 typescript
-    color: 3178c6
+    color: '#3178c6'
     description: issue related to types
   - name: 💬 discussion
-    color: 4935ad
+    color: '#4935ad'
     description: topic that requires further discussion
-    oldname: discussion
   - name: 📚 docs
-    color: 8be281
+    color: '#8be281'
     description: related to documentation
-    oldname: documentation
   - name: 1️⃣ good first issue
-    color: 7057ff
+    color: '#7057ff'
     description: this should be manageable for new-comers
-    oldname: good first issue
   - name: 🙏 help wanted
-    color: 008672
+    color: '#008672'
     description: help in this issue is welcome
-  - name: 🚫 wontfix
-    color: ffffff
+  - name: wontfix
+    color: '#ffffff'
     description: this issue won't be fixed
-    oldname: wontfix
+  - name: 🟣 meta
+    color: '#5319e7'
+    description: related to the project itself
+  - name: ↗️ upstream
+    color: '#baffc9'
+    description: blocked by an external dependency

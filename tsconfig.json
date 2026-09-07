@@ -1,23 +1,13 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "baseUrl": ".",
-    "rootDir": ".",
-    "module": "esnext",
-    "moduleResolution": "Bundler",
-    "paths": {
-      "@posva/event-emitter": [
-        "./src/index.ts"
-      ]
-    },
-    "strict": true,
-    "noEmit": true,
-    // TSUP issue https://github.com/egoist/tsup/issues/571
-    // "composite": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "lib": ["esnext", "dom"],
+    "module": "Preserve",
+    "moduleResolution": "Bundler"
   },
-  "include": [
-    "src",
-  ]
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    }
+  ],
+  "files": []
 }
