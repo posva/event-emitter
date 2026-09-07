@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "composite": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true,
+    "declarationDir": "./.tsc-types/configs",
+    "allowJs": true,
+    "noEmit": false
+  },
+  "include": ["*.config.ts", "typedoc.js"]
+}

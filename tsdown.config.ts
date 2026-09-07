@@ -22,7 +22,7 @@ const commonOptions = {
   tsconfig: 'tsconfig.build.json',
   dts: {
     enabled: true,
-    oxc: true,
+    generator: 'oxc',
   },
   exports: true,
 } satisfies UserConfig
